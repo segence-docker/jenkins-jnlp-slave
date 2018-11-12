@@ -1,0 +1,2 @@
+Jenkins JNLP Slave
+==================
