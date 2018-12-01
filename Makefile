@@ -3,7 +3,12 @@ REPOSITORY := $(shell basename -s .git `git config --get remote.origin.url`)
 VERSION := $(shell git tag --points-at HEAD)
 
 JENKINS_UID := 1000
-JENKINS_GID := 1000
+
+ifneq (,$(findstring minikube,$(VERSION)))
+    JENKINS_GID := 1001
+else
+    JENKINS_GID := 1000
+endif
 
 all:
 	@echo "Use a specific goal. To list all goals, type 'make help'"
