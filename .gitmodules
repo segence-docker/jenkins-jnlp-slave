@@ -1,8 +1,0 @@
-[submodule "docker-slave"]
-	path = docker-slave
-	url = https://github.com/jenkinsci/docker-slave.git
-        branch = alpine
-[submodule "docker-jnlp-slave"]
-	path = docker-jnlp-slave
-	url = https://github.com/jenkinsci/docker-jnlp-slave.git
-        branch = alpine
